@@ -22,6 +22,14 @@ const (
 	KindMalformedMetadata ErrorKind = "malformed_metadata"
 	// KindKeyMismatch 信封引用的密钥版本与解密所用密钥不匹配。
 	KindKeyMismatch ErrorKind = "key_mismatch"
+	// KindStorageCorrupted 本地状态文件被截断、校验和不符或内容无法解析。
+	KindStorageCorrupted ErrorKind = "storage_corrupted"
+	// KindUnsupportedFormat 状态文件使用了比当前更新或无法识别的格式版本。
+	KindUnsupportedFormat ErrorKind = "unsupported_format"
+	// KindMigrationConflict 迁移作业的条目与既有作业不一致（重复/多余/重复 ID）。
+	KindMigrationConflict ErrorKind = "migration_conflict"
+	// KindMigrationNotFound 请求的迁移作业不存在。
+	KindMigrationNotFound ErrorKind = "migration_not_found"
 	// KindInternal 内部错误，细节不对外暴露。
 	KindInternal ErrorKind = "internal"
 )
