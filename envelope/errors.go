@@ -22,6 +22,13 @@ const (
 	KindMalformedMetadata ErrorKind = "malformed_metadata"
 	// KindKeyMismatch 信封引用的密钥版本与解密所用密钥不匹配。
 	KindKeyMismatch ErrorKind = "key_mismatch"
+	// KindStorageCorrupt 本地持久化状态文件被截断、校验和不符或内容语义损坏。
+	KindStorageCorrupt ErrorKind = "storage_corrupt"
+	// KindUnsupportedFormat 状态文件格式版本比当前程序支持的更新，拒绝加载。
+	KindUnsupportedFormat ErrorKind = "unsupported_format"
+	// KindMigrationState 迁移会话状态非法：源版本不可迁移、条目 ID 重复、
+	// 已有进行中的同版本迁移等。
+	KindMigrationState ErrorKind = "migration_state"
 	// KindInternal 内部错误，细节不对外暴露。
 	KindInternal ErrorKind = "internal"
 )
